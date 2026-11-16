@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Outfit', sans-serif;
+            /* Deep blue atmospheric animated gradient */
+            background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #0c4a6e);
+            background-size: 400% 400%;
+            animation: ambientShift 15s ease infinite;
+        }
+
+        @keyframes ambientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Subtle soft ambient glow behind text */
+        .ambient-glow {
+            background: radial-gradient(circle at center, rgba(56, 189, 248, 0.14) 0%, rgba(15, 23, 42, 0) 65%);
+        }
+
+        /* Refined, modern typography styling */
+        .hello-text {
+            background: linear-gradient(180deg, #ffffff 0%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 10px 30px rgba(56, 189, 248, 0.25));
+            animation: floatFade 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatFade {
+            0% {
+                opacity: 0.9;
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(-6px);
+            }
+        }
+    </style>
+</head>
+<body class="w-screen h-screen flex items-center justify-center relative select-none">
+
+    <!-- Soft atmospheric radial light -->
+    <div class="absolute inset-0 ambient-glow pointer-events-none"></div>
+
+    <!-- Centered Hello Title -->
+    <h1 class="hello-text text-6xl sm:text-8xl md:text-9xl font-semibold tracking-tight z-10">
+        Chart Characters Cup
+    </h1>
+
+</body>
+</html>
